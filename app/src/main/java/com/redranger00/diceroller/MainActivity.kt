@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val rollBtn: Button = findViewById(R.id.button)
         rollBtn.setOnClickListener { rollDice() }
-        val diceImage : ImageView = findViewById(R.id.imageView)
+        val diceImage: ImageView = findViewById(R.id.imageView)
         diceImage.setOnClickListener { rollDice() }
     }
 
@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         }
         diceImage.setImageResource(drawableResource)
         diceImage.contentDescription = diceRoll.toString()
-
+        Toast.makeText(this, "You Rolled $diceRoll", Toast.LENGTH_SHORT).show()
     }
 }
 
